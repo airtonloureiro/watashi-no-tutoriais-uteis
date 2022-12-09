@@ -1,0 +1,28 @@
+Primeiro passo é instalar o brightnessctl 
+
+'sudo apt install brightnessctl'
+
+
+Depois de instalado, listar todos os dispositivos 'devices' que estão disponiveis na máquina
+
+'brightnessctl -l'
+
+
+No meu caso como estou com o Dell G15 2022, uma vez ou outra está desligando o teclado. 
+P.s: Estou usando o sistema Linux nele :)
+
+Então nesse caso o dispositivo o disposito desse notebook, fica no caminho
+sys/class/leds/brightness/dell:kbd_backlight 
+
+
+Device 'dell:kbd_backlight' of class 'leds'
+
+
+O comando para ligar é simples apenas setar o valor que deseja, no caso o valor 1 já está de bom tamanho
+
+sudo brightnessctl --device='dell::kbd_backlight' s 1
+
+
+Pronto, fazendo isso o teclado já deveria ter ligado. 
+
+:) 
